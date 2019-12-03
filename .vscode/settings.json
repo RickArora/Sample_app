@@ -2,5 +2,8 @@
   "git.ignoreLimitWarning": true,
   "[ruby]": {
     "editor.formatOnSave": true
+  },
+  "files.associations": {
+    "*.erb": "erb"
   }
 }
