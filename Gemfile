@@ -3,15 +3,8 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-<<<<<<< HEAD
-gem 'bootsnap',   '1.4.4', require: false
-gem 'jbuilder',   '2.9.1'
-gem 'puma',       '3.12.1'
-gem 'rails',      '6.0.1'
-=======
 gem 'rails',      '6.0.1'
 gem 'puma',       '3.12.2'
->>>>>>> 5e0e745e0079caabed92e5ad163ca5637be4bf1a
 gem 'sass-rails', '5.1.0'
 gem 'turbolinks', '5.2.0'
 gem 'webpacker',  '4.0.7'
