@@ -63,13 +63,8 @@ GEM
       execjs
     bcrypt (3.1.13)
     bindex (0.8.1)
-<<<<<<< HEAD
-=======
     bootsnap (1.4.4)
       msgpack (~> 1.0)
-    bootsnap (1.4.4-java)
-      msgpack (~> 1.0)
->>>>>>> modeling-users
     bootstrap-sass (3.4.1)
       autoprefixer-rails (>= 5.2.1)
       sassc (>= 2.0.0)
@@ -112,6 +107,8 @@ GEM
       minitest (>= 3.0)
     i18n (1.7.0)
       concurrent-ruby (~> 1.0)
+    jbuilder (2.9.1)
+      activesupport (>= 4.2.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -134,13 +131,7 @@ GEM
       builder
       minitest (>= 5.0)
       ruby-progressbar
-<<<<<<< HEAD
-=======
     msgpack (1.3.1)
-    msgpack (1.3.1-java)
-    msgpack (1.3.1-x64-mingw32)
-    msgpack (1.3.1-x86-mingw32)
->>>>>>> modeling-users
     nenv (0.3.0)
     nio4r (2.5.2)
     nio4r (2.5.2-java)
@@ -286,16 +277,14 @@ PLATFORMS
   x86-mswin32
 
 DEPENDENCIES
-<<<<<<< HEAD
-=======
   bcrypt (= 3.1.13)
   bootsnap (= 1.4.4)
->>>>>>> modeling-users
   bootstrap-sass (= 3.4.1)
   byebug
   capybara (= 3.28.0)
   guard (= 2.15.0)
   guard-minitest (= 2.4.6)
+  jbuilder (= 2.9.1)
   listen (= 3.1.5)
   minitest (= 5.11.3)
   minitest-reporters (= 1.3.8)
