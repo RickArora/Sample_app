@@ -12,12 +12,21 @@ NULLCMD = :
 #### Start of system configuration section. ####
 
 srcdir = .
+<<<<<<< HEAD
 topdir = /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/include/ruby-2.6.0
 hdrdir = $(topdir)
 arch_hdrdir = /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/include/ruby-2.6.0/universal-darwin19
 PATH_SEPARATOR = :
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
 prefix = $(DESTDIR)/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr
+=======
+topdir = /Users/Rtyer/.rbenv/versions/2.6.3/include/ruby-2.6.0
+hdrdir = $(topdir)
+arch_hdrdir = /Users/Rtyer/.rbenv/versions/2.6.3/include/ruby-2.6.0/x86_64-darwin18
+PATH_SEPARATOR = :
+VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
+prefix = $(DESTDIR)/Users/Rtyer/.rbenv/versions/2.6.3
+>>>>>>> modeling-users
 rubysitearchprefix = $(rubylibprefix)/$(sitearch)
 rubyarchprefix = $(rubylibprefix)/$(arch)
 rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
@@ -31,9 +40,15 @@ rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendordir = $(rubylibprefix)/vendor_ruby
+<<<<<<< HEAD
 sitearchdir = $(DESTDIR)./.gem.20191207-30906-zvahs8
 sitelibdir = $(DESTDIR)./.gem.20191207-30906-zvahs8
 sitedir = $(DESTDIR)/Library/Ruby/Site
+=======
+sitearchdir = $(DESTDIR)./.gem.20191222-70745-ogwq2c
+sitelibdir = $(DESTDIR)./.gem.20191222-70745-ogwq2c
+sitedir = $(rubylibprefix)/site_ruby
+>>>>>>> modeling-users
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
 sitearchincludedir = $(includedir)/$(sitearch)
@@ -41,13 +56,18 @@ archincludedir = $(includedir)/$(arch)
 sitearchlibdir = $(libdir)/$(sitearch)
 archlibdir = $(libdir)/$(arch)
 ridir = $(datarootdir)/$(RI_BASE_NAME)
+<<<<<<< HEAD
 mandir = $(DESTDIR)/usr/share/man
+=======
+mandir = $(datarootdir)/man
+>>>>>>> modeling-users
 localedir = $(datarootdir)/locale
 libdir = $(exec_prefix)/lib
 psdir = $(docdir)
 pdfdir = $(docdir)
 dvidir = $(docdir)
 htmldir = $(docdir)
+<<<<<<< HEAD
 infodir = $(DESTDIR)/usr/share/info
 docdir = $(datarootdir)/doc/$(PACKAGE)
 oldincludedir = $(DESTDIR)/usr/include
@@ -55,6 +75,15 @@ includedir = $(DESTDIR)/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk$(pref
 localstatedir = $(prefix)/var
 sharedstatedir = $(prefix)/com
 sysconfdir = $(DESTDIR)/Library/Ruby/Site
+=======
+infodir = $(datarootdir)/info
+docdir = $(datarootdir)/doc/$(PACKAGE)
+oldincludedir = $(SDKROOT)/usr/include
+includedir = $(prefix)/include
+localstatedir = $(prefix)/var
+sharedstatedir = $(prefix)/com
+sysconfdir = $(prefix)/etc
+>>>>>>> modeling-users
 datadir = $(datarootdir)
 datarootdir = $(prefix)/share
 libexecdir = $(exec_prefix)/libexec
@@ -64,8 +93,13 @@ archdir = $(rubyarchdir)
 
 
 CC_WRAPPER = 
+<<<<<<< HEAD
 CC = xcrun clang
 CXX = xcrun clang++
+=======
+CC = clang
+CXX = clang++
+>>>>>>> modeling-users
 LIBRUBY = $(LIBRUBY_SO)
 LIBRUBY_A = lib$(RUBY_SO_NAME)-static.a
 LIBRUBYARG_SHARED = -l$(RUBY_SO_NAME)
@@ -78,6 +112,7 @@ CSRCFLAG = $(empty)
 RUBY_EXTCONF_H = 
 cflags   = $(optflags) $(debugflags) $(warnflags)
 cxxflags = $(optflags) $(debugflags) $(warnflags)
+<<<<<<< HEAD
 optflags = 
 debugflags = -g
 warnflags = 
@@ -91,6 +126,21 @@ CXXFLAGS = $(CCDLFLAGS)  -g -Os -pipe  $(ARCH_FLAG)
 ldflags  = -L. -L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.Internal.sdk/usr/local/lib
 dldflags = -arch x86_64             -undefined dynamic_lookup -multiply_defined suppress 
 ARCH_FLAG =  -arch x86_64
+=======
+optflags = -O3
+debugflags = -ggdb3
+warnflags = -Wall -Wextra -Wdeclaration-after-statement -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wmissing-noreturn -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens
+cppflags = 
+CCDLFLAGS = -fno-common
+CFLAGS   = $(CCDLFLAGS)  -O3 -Wno-error=shorten-64-to-32  -fno-common -pipe $(ARCH_FLAG)
+INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
+DEFS     = 
+CPPFLAGS = -DHAVE_OPENSSL_BIO_H -I/Users/Rtyer/.rbenv/versions/2.6.3/openssl/include -I/Users/Rtyer/.rbenv/versions/2.6.3/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags)
+CXXFLAGS = $(CCDLFLAGS) $(cxxflags) $(ARCH_FLAG)
+ldflags  = -L. -L/Users/Rtyer/.rbenv/versions/2.6.3/lib  -fstack-protector-strong -L/usr/local/lib
+dldflags = -L/Users/Rtyer/.rbenv/versions/2.6.3/lib  -Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress 
+ARCH_FLAG = 
+>>>>>>> modeling-users
 DLDFLAGS = $(ldflags) $(dldflags) $(ARCH_FLAG)
 LDSHARED = $(CC) -dynamic -bundle
 LDSHAREDXX = $(CXX) -dynamic -bundle
@@ -104,7 +154,11 @@ RUBY_VERSION_NAME = $(RUBY_BASE_NAME)-$(ruby_version)
 RUBYW_BASE_NAME = rubyw
 RUBY_BASE_NAME = ruby
 
+<<<<<<< HEAD
 arch = universal-darwin19
+=======
+arch = x86_64-darwin18
+>>>>>>> modeling-users
 sitearch = $(arch)
 ruby_version = 2.6.0
 ruby = $(bindir)/$(RUBY_BASE_NAME)
@@ -124,8 +178,13 @@ TOUCH = exit >
 #### End of system configuration section. ####
 
 preload = 
+<<<<<<< HEAD
 libpath = . $(libdir) /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.Internal.sdk/usr/local/libressl/lib
 LIBPATH =  -L. -L$(libdir) -L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.Internal.sdk/usr/local/libressl/lib
+=======
+libpath = . $(libdir) /Users/Rtyer/.rbenv/versions/2.6.3/openssl/lib
+LIBPATH =  -L. -L$(libdir) -L/Users/Rtyer/.rbenv/versions/2.6.3/openssl/lib
+>>>>>>> modeling-users
 DEFFILE = 
 
 CLEANFILES = mkmf.log
@@ -136,7 +195,11 @@ extout =
 extout_prefix = 
 target_prefix = /puma
 LOCAL_LIBS = 
+<<<<<<< HEAD
 LIBS = $(LIBRUBYARG_SHARED)   
+=======
+LIBS = $(LIBRUBYARG_SHARED) -lssl -lcrypto   
+>>>>>>> modeling-users
 ORIG_SRCS = http11_parser.c io_buffer.c mini_ssl.c puma_http11.c
 SRCS = $(ORIG_SRCS) 
 OBJS = http11_parser.o io_buffer.o mini_ssl.o puma_http11.o

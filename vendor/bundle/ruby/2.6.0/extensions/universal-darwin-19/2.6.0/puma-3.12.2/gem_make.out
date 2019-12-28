@@ -1,5 +1,9 @@
 current directory: /Users/Rtyer/Documents/enviornment/sample_app/vendor/bundle/ruby/2.6.0/gems/puma-3.12.2/ext/puma_http11
+<<<<<<< HEAD
 /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/ruby -I /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0 -r ./siteconf20191207-30906-eb9wop.rb extconf.rb
+=======
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/ruby -I /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0 -r ./siteconf20191222-54837-h39ytd.rb extconf.rb
+>>>>>>> modeling-users
 checking for BIO_read() in -lcrypto... no
 checking for BIO_read() in -llibeay32... no
 creating Makefile
@@ -19,4 +23,8 @@ ld: warning: directory not found for option '-L/Applications/Xcode.app/Contents/
 
 current directory: /Users/Rtyer/Documents/enviornment/sample_app/vendor/bundle/ruby/2.6.0/gems/puma-3.12.2/ext/puma_http11
 make "DESTDIR=" install
+<<<<<<< HEAD
 /usr/bin/install -c -m 0755 puma_http11.bundle ./.gem.20191207-30906-zvahs8/puma
+=======
+/usr/bin/install -c -m 0755 puma_http11.bundle ./.gem.20191222-54837-fukasn/puma
+>>>>>>> modeling-users
